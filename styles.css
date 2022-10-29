@@ -1,0 +1,116 @@
+
+:root {
+  --main-clr: green;
+  --black: #0e0e0e;
+  --transition: 200ms ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', sans-serif;
+  color: var(--black);
+}
+
+.btn {
+  font-size: 1rem;
+  background: transparent;
+  color: var(--black);
+  padding: 0.5rem 2rem;
+  display: inline-block;
+  transition: var(--transition);
+  border: 2px solid black;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+  color: white;
+  background: var(--black);
+}
+
+.hero {
+  min-height: 100vh;
+  background: url("./hero.jpg") center/cover no-repeat;
+  display: grid;
+  place-items: center;
+}
+
+.banner {
+  background: white;
+  padding: 4rem 0;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 90vw;
+  max-width: 620px;
+}
+
+.modal-btn {
+  margin-top: 2rem;
+  background: transparent;
+  border-color: var(--main-clr);
+  color: var(--black);
+}
+
+.modal-btn:hover {
+  background: var(--main-clr);
+  color: white;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: grid;
+  place-items: center;
+  transition: var(--transition);
+  visibility: hidden;
+  z-index: -10;
+}
+
+.open-modal {
+  visibility: visible;
+  z-index: 10;
+}
+
+.modal-container {
+  background: white;
+  border-radius: 10px;
+  width: 90vw;
+  height: 45vh;
+  max-width: 768px;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.modal-container h3 {
+  margin: 3rem;
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  background: transparent;
+  border-color: transparent;
+  color: red;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.close-btn:hover {
+  color: darkred;
+}
